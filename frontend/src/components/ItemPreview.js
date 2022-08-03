@@ -65,5 +65,5 @@ const ItemPreview = (props) => {
 
 export default connect(() => ({}), mapDispatchToProps)(ItemPreview);
 addDefaultSrc(ev){
-	ev.target.src = '../../public/placeholder.png'
+	ev.target.src = '../../public/placeholder.png';
 }
