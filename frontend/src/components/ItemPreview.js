@@ -36,10 +36,10 @@ const ItemPreview = (props) => {
     >
       <img
         alt="item"
-        src={item.image}
+        imgSrc={item.image}
         onError={({ currentTarget }) => {
           currentTarget.onerror = null; 
-          currentTarget.src="placeholder.png";
+          currentTarget.imgSrc="placeholder.png";
         }}
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
