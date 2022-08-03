@@ -38,7 +38,7 @@ const ItemPreview = (props) => {
         src={item.image}
         onError = {({ currentTarget }) => {
         currentTarget.onerror = null;
-        currentTarget.src="https://github.com/ObelusFamily/Anythink-Market-xlyfn/blob/main/frontend/public/placeholder.png?raw=true";
+        currentTarget.src="placeholder.png";
         }}
         alt="item"
         className="card-img-top item-img"
