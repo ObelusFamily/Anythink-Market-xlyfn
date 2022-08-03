@@ -50,11 +50,11 @@ class Item extends React.Component {
           <div className="row bg-white p-4">
             <div className="col-6">
               <img
-                imgSrc={this.props.item.image}
+                src={this.props.item.image}
                 alt={this.props.item.title}
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null; 
-                  currentTarget.imgSrc="../placeholder.png";
+                  currentTarget.src="../placeholder.png";
                 }}
                 className="item-img"
                 style={{ height: "500px", width: "100%", borderRadius: "6px" }}
