@@ -52,6 +52,10 @@ class Item extends React.Component {
               <img
                 src={this.props.item.image}
                 alt={this.props.item.title}
+                onError = {({ currentTarget }) => {
+                  currentTarget.onerror = null;
+                  currentTarget.src="https://github.com/ObelusFamily/Anythink-Market-xlyfn/blob/main/frontend/public/placeholder.png?raw=true";
+                }}
                 className="item-img"
                 style={{ height: "500px", width: "100%", borderRadius: "6px" }}
               />

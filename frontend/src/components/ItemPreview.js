@@ -35,9 +35,12 @@ const ItemPreview = (props) => {
       style={{ borderRadius: "20px" }}
     >
       <img
-	onError = {this.addDefaultSrc}
-	alt="item"
         src={item.image}
+        onError = {({ currentTarget }) => {
+        currentTarget.onerror = null;
+        currentTarget.src="https://github.com/ObelusFamily/Anythink-Market-xlyfn/blob/main/frontend/public/placeholder.png?raw=true";
+        }}
+        alt="item"
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
       />
@@ -64,6 +67,3 @@ const ItemPreview = (props) => {
 };
 
 export default connect(() => ({}), mapDispatchToProps)(ItemPreview);
-addDefaultSrc = (ev) => {
-	ev.target.src = '../../public/placeholder.png';
-}
