@@ -35,7 +35,8 @@ const ItemPreview = (props) => {
       style={{ borderRadius: "20px" }}
     >
       <img
-        alt="item"
+        onError = {this.addDefaultSrc}
+	alt="item"
         src={item.image}
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
@@ -63,3 +64,7 @@ const ItemPreview = (props) => {
 };
 
 export default connect(() => ({}), mapDispatchToProps)(ItemPreview);
+
+addDefaultSrc(ev){
+	ev.target.src = '../../public/placeholder.png'
+}
