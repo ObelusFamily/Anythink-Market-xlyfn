@@ -75,11 +75,7 @@ async def create_new_item(
         body=item_create.body,
         seller=user,
         tags=item_create.tags,
-        if item_create.image != None:
-            image=item_create.image
-        else:
-            image=FileResponse("placeholder.png", media_type="image/png")
-
+        image=item_create.image
     )
     send_event('item_created', {'item': item_create.title})
     return ItemInResponse(item=ItemForResponse.from_orm(item))
